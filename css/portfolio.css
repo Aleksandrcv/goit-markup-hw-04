@@ -124,18 +124,6 @@ img {
   color: var(--primary-text-color);
 }
 
-.selected-page::after {
-  display: block;
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  width: 100%;
-  height: 4px;
-
-  background: var(--accent-color);
-  border-radius: 2px;
-}
 /*логотип-фуутер*/
 .logotip-footer {
   font-family: Raleway, sans-serif;
@@ -154,12 +142,11 @@ img {
 }
 
 /*шапка*/
-
 .navigation {
   display: flex;
   align-items: baseline;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border-bottom: 1px solid rgb(236, 236, 236);
 }
 
@@ -171,18 +158,27 @@ img {
   margin-bottom: 0;
   margin-left: 93px;
 }
+.selected-page::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 4px;
 
-.nav-link .list {
-  margin-right: 50px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
-.nav-link .list:last-child {
-  margin-right: 0px;
+
+.nav-link .list:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-link a {
   position: relative;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--main-text-color);
 
@@ -195,6 +191,63 @@ img {
 .nav-link a:hover,
 .nav-link a:focus {
   color: var(--accent-color);
+}
+
+/*адрес і мейл*/
+
+.adress-list .list {
+  margin-right: 50px;
+}
+/*.adress-list .list:last-child {
+  margin-right: 0px;
+}
+*/
+.adress-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.adress-list .lists:not(:last-child) {
+  margin-right: 50px;
+}
+.adress-list .lists {
+  display: flex;
+  align-items: center;
+  color: var(--tittle-text-color);
+  margin-left: auto;
+
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.link-adress {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.icon-contact {
+  display: block;
+  margin-right: 10px;
+}
+
+.lists {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  font-style: normal;
+
+  color: var(--tittle-text-color);
+}
+
+.adress-list :hover,
+.adress-list :focus {
+  color: var(--accent-color);
+  --color3: var(--accent-color);
 }
 
 /*адрес і мейл*/
@@ -384,10 +437,6 @@ img {
 /*наша команда*/
 
 .teams {
-  /* width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;*/
   background-color: var(--background-color-third);
 }
 .our-title {
@@ -510,21 +559,15 @@ img {
 .clients-list a:focus,
 .thumb-clients:hover,
 .thumb-clients:focus {
-  color: var(--accent-color);
+  --color4: var(--accent-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
 
 /* Подвал */
 
-.footer-contacts {
-  /*width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-*/
-  background-color: var(--background-color-second);
+footer {
+  background-color: #2f303a;
 }
 
 .footer-contacts {
@@ -581,33 +624,16 @@ img {
 
 /*кнопки-ссылки*/
 .sections-works {
-  /*
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  border: 1px solid var(--accent-color);*/
   margin: 0;
   padding: 0;
 }
-/*.portfolio {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 
-  background-color: var(--portfoliomain-background-color);
-}
-*/
 .links-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  margin-top: 94px;
+  margin-bottom: 50px;
 }
 
 .b1 {
